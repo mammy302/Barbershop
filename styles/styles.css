@@ -1,0 +1,599 @@
+@font-face {
+    font-family:"PT Sans";
+    font-style: normal;
+    font-weight: 400;
+  
+    src: url("../../sedona/fonts/ptsans-400.woff2") format("woff2");
+
+    font-display: swap;
+}
+
+@font-face {
+    font-family:"PT Sans";
+    font-style: normal;
+    font-weight: 700;
+  
+    src: url("../../sedona/fonts/ptsans-700.woff2") format("woff2");
+
+    font-display: swap;
+}
+
+@font-face {
+    font-family:"PT Sans";
+    font-style: italic;
+    font-weight: 400;
+  
+    src: url("../fonts/pt-sans-italic.woff2") format("woff2");
+
+    font-display: swap;
+}
+
+@font-face {
+    font-family:"PT Sans";
+    font-style: italic;
+    font-weight: 700;
+  
+    src: url("../fonts/pt-sans-bold-italic.woff2") format("woff2");
+
+    font-display: swap;
+}
+
+
+ /*PT Sans Narrow */
+@font-face {
+  font-family: "PT Sans Narrow";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/pt-sans-narrow-bold.woff2") format("woff2");
+  font-display: swap;
+}
+
+html {
+    height: 100%;
+}
+body {
+    margin: 0;
+    display:flex;
+    flex-direction: column;
+    min-height: 100%;
+    font-family: "PT Sans", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #242424;
+    background: color #ffffff;;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect (0 0 0 0);
+    overflow: hidden;
+}
+
+.main-container {
+    flex-grow:1;
+    padding-top: 64px;
+    padding-bottom: 60px;
+}
+
+.button {
+font-family: inherit;
+line-height: 16px;
+text-align: center;
+color:#ffffff;
+background-color: #000000;
+text-decoration: none;
+text-transform: uppercase;
+}
+
+.button-feedback {
+    color:#000000;
+    background-color: #ffffff;
+}
+
+/*Pages*/
+.page-header {
+color:white;
+background-color: #000000;
+}
+
+.navigation {
+    display:flex;
+    width: 940px;
+    margin:0 auto;
+    
+}
+
+.navigation-list {
+    display: flex;
+    flex-wrap: wrap;  
+    margin:0;
+    padding:0;
+    width: 470px;
+    list-style-type: none;
+    outline: 3px solid orange;    
+}
+
+.navigation-user {
+    max-width: 250px;
+    margin-left: auto;
+    outline: 3px solid orange;
+}
+
+.navigation-user .navigation-link {
+    min-width: 16px;
+    min-height: 22px;
+     outline: 3px solid orange;
+}
+
+.navigation-link {
+    display: block; 
+    font-family: "PT Sans", sans-serif;
+    line-height: 22px;
+    color: inherit;
+    font-weight:700;
+    text-align:center;
+    text-decoration:none;
+    text-transform:uppercase;
+    padding: 24px 20px;
+}
+
+.navigation-logo {
+    width:140px;
+    margin-right:100px;
+}
+
+.page-container {
+width:940px;
+margin:0 auto;
+}
+
+.logo {
+margin:0 auto;
+display:block;
+margin-bottom: 64px;
+}
+
+.main-index {
+    background-image: url("../images/interier.jpg");
+    background-color:#000000 ;
+    color:#ffffff;
+    background-size: 100% auto;
+    background-repeat:no-repeat;
+}
+
+.advantages {
+    margin-bottom: 58px;
+}
+
+.advantages-list {
+    display:flex;
+    justify-content: space-between;
+    text-align:center;
+    margin:0;
+    padding:0;
+    list-style-type: none;
+}
+
+.advantages-item {
+    width: 277px;
+    outline: 3px solid greenyellow;
+}
+
+.advantages-title {
+   font-family: "PT Sans", sans-serif;
+   font-size: 32px;
+   line-height: 35px;
+   font-weight:700;
+   text-transform:uppercase; 
+   margin-top: 0;
+   margin-bottom: 56px;
+}
+
+.advantages-description {
+    margin: 0;
+}
+
+.index-columns {
+    background-image: url(../images/background-pattern.png);
+    background-color: #fbf7f4;
+    color: #242424;
+    display:flex;
+    justify-content: space-between;
+    padding:40px;
+    margin-bottom: 32px;
+    outline: 3px solid red;
+}
+
+.index-columns:nth-last-child {
+    margin-bottom: 0;
+}
+.main-inner {
+  color: #242424;
+  background-color: #fbf7f4;
+  background-image: url(../images/background-pattern.png);
+  padding-top: 40px;
+}
+.services {
+    text-transform:uppercase;
+     text-align:left;
+    width: 390px;
+}
+
+.gallery {
+    width: 390px;
+}
+
+.services-title {
+font-family:"PT Sans", sans-serif;
+font-size: 32px;
+font-weight:700;
+line-height: 35px;
+margin-top: 0;
+margin-bottom: 28px;
+}
+
+.services-price {
+    color:#AF7842;
+}
+
+.gallery-title {
+font-family:"PT Sans", sans-serif;
+font-size: 32px;
+font-weight:700;
+line-height: 35px;
+text-transform:uppercase;
+margin-top: 0;
+margin-bottom: 28px;
+/* Проверить сильное ли расхождение (на макете 20) */
+
+}
+
+.contacts {
+    font-weight: 700;
+    width: 352px;
+}
+
+.contacts-title {
+font-family:"PT Sans", sans-serif;
+font-size: 32px;
+font-weight: 700;
+line-height: 35px; 
+text-transform: uppercase; 
+margin-top: 0;
+margin-bottom: 28px;
+/* Проверить сильное ли расхождение (на макете 24) */
+}
+
+.contacts-subtitle {
+font-family:"PT Sans", sans-serif;
+font-size: 20px;
+color:#AF7842;
+font-weight:700;
+line-height: 28px;
+text-transform: uppercase;
+
+}
+
+.contacts-address {
+font-style:normal /*хотя он в моем браузере не отражается наклонным*/ 
+}
+
+.contacts-phone {
+font-family:"PT Sans", sans-serif;
+font-size: 24px; 
+line-height: 29px;
+text-transform: uppercase;
+color: black;   
+}
+.appointment {
+    width:430px;
+}
+
+.appointment-title {
+font-family:"PT Sans", sans-serif;
+font-size: 32px;
+font-weight: 700;
+line-height: 35px; 
+text-transform: uppercase;   
+margin-top: 0;
+margin-bottom: 28px;
+/* Проверить сильное ли расхождение (на макете 20) */
+}
+
+.appointment-text {
+font-weight: 400;
+font-size: 14px;
+color:#595959;
+line-height: 20px;
+}
+
+.appointment label {
+text-transform: uppercase;  
+}
+.appointment-form {
+    display: grid;
+    width: 430px;
+    grid-template-columns: 114px 74px 208px;
+    gap:19px 17px;
+    outline: 3px solid firebrick;
+   
+} 
+
+.appointment-form-name {
+    grid-column: 1/-1;
+}
+
+.appointment-submit {
+    grid-column: 1/-1;
+    justify-self: start;
+}
+.field-group input,
+.field-group label {
+    display: block;
+    width: 100%;
+    box-sizing: border-box; 
+}
+/* .field-group {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    
+} */
+
+
+.page-footer {
+background-color:#242424;
+background-image: url(../images/background-pattern.png);
+color:#ffffff;
+font-family:"PT Sans", sans-serif; ;
+font-size: 14px;
+line-height: 20px;
+font-weight: 700;
+background-repeat:repeat;
+}
+
+.page-footer-container {
+display:flex;
+width: 940px;
+margin:0 auto;
+padding: 40px 0;
+
+}
+
+.footer-social-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin:0;
+    padding:0;
+    list-style-type: none;
+}
+
+.footer-social-item {
+    width: 56px;
+    height: 44px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+  outline: 3px solid fuchsia;   
+}
+
+.footer-social-item:nth-child(3n) {
+  margin-right: 0;  
+}
+
+.footer-contacts {
+    width: 200px;
+    margin-right:auto;
+}
+
+.footer-contacts a  {
+font-family: "PT Sans", sans-serif;;
+color: inherit;
+font-size: 20px;
+text-transform: uppercase; 
+}
+
+.footer-contacts-phone {
+    line-height: 28px;
+}
+
+.newsletter {
+    width: 279px;
+}
+
+.footer-social {
+    width:184px;
+    margin-left: auto;
+}
+
+.about-text .htmlacademy-link {
+    color:#AF7842;
+        text-transform: none;
+}
+
+.page-footer-title {
+    font-family: "PT Sans",sans-serif;
+    font-size: 20px;
+    line-height:28px;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 14px;
+       
+}
+
+.inner-header-title {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-family: "PT Sans",sans-serif;
+    font-size: 32px;
+    line-height: 35px;
+    text-transform: uppercase;
+}
+
+.breadcrumbs {
+    font-weight: 400;
+    color: #242424;
+    display:flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;    
+}
+
+.breadcrumbs-link {
+    color: inherit;
+    margin-right: 32px;
+
+}
+
+.catalog-filter-title {
+    font-family:"PT Sans",sans-serif;
+    font-size: 20px;
+    line-height: 28px;
+    text-transform: uppercase;
+    font-weight: 700;<span class="visually-hidden"> 
+}
+
+.control {
+    line-height: 22px;
+    font-weight: 700;
+}
+
+.sorting-container {
+    display: flex;
+    background-color: #ffffff;
+    color:#000000;
+    margin-bottom: 16px;
+    padding: 16px;
+}
+
+.sorting-container .button {
+    width: 56px;
+    height: 44px;
+outline: 3px solid lightpink;   
+}
+
+.button-light {
+    background-color:#ffffff;
+    color: #000000;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(3, 220px);
+    gap: 20px;
+   margin: 0; 
+   padding: 0;
+   list-style-type: none;
+   margin-bottom: 24px;
+}
+.product-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+}
+
+.product-card-image {
+    
+    padding: 16px 0;
+}
+.product-card-content {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+
+.product-card-link  {
+text-decoration: none;
+}
+
+.product-card-title {
+font-weight:700;
+font-size: 16px;
+line-height: 24px;
+color: #242424;
+}
+
+.product-card-link-title {
+
+    margin-top: 16px;
+    margin-bottom: 8px;
+}
+.product-card-price {
+  font-size: 24px;
+  font-family:"PT Sans",sans-serif;
+  line-height: 29px;
+  font-weight: 700;
+  color: #814b18;
+  text-transform: uppercase;
+margin-bottom: 16px;}
+
+  .product-card-button {
+    margin-top: auto;
+  }
+  .pagination-container {
+    display: flex;
+    padding: 16px;
+     background-color:#ffffff;
+  }
+
+.pagination {
+    display:flex;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    list-style-type: none;
+  background-color: #ffffff;
+}
+
+.pagination-item:not(:last-child) {
+    margin-right: 8px;
+}
+
+.pagination-show-more {
+    margin-left: auto;
+}
+
+.pagination-link {
+  display: block;
+  box-sizing: border-box;
+  width: 50px;
+  height: 44px;
+  padding: 14px 20px;
+  color: #ffffff;
+  background-color: #000000;
+  text-decoration: none;
+  line-height: 16px;
+  font-weight: 700;
+}
+
+.pagination-current {
+  color: #242424;
+  background-color: #ffffff;
+}
+
+.pagination-disabled {
+  background-color: #595959;
+}
+
+.catalog-products {
+    display: flex;
+}
+
+.catalog-filter {
+  width: 220px;
+  margin-right: 20px;
+  
+}
+
+.catalog-right-column {
+    width:700px;
+    
+}
+
