@@ -81,6 +81,7 @@ body {
 }
 
 .button {
+display: inline-block;
 font-family: inherit;
 line-height: 16px;
 text-align: center;
@@ -88,6 +89,9 @@ color:#ffffff;
 background-color: #000000;
 text-decoration: none;
 text-transform: uppercase;
+padding: 14px 20px;
+border:none;
+cursor: pointer;
 }
 
 .button-feedback {
@@ -129,6 +133,7 @@ background-color: #000000;
     min-height: 22px;
      outline: 3px solid orange;
 }
+
 
 .navigation-link {
     display: block; 
@@ -237,10 +242,27 @@ margin-top: 0;
 margin-bottom: 28px;
 }
 
+.services-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
 .services-price {
     color:#AF7842;
 }
 
+.services-item {
+    margin-bottom: 22px;
+}
+
+.button-all {
+
+}
 .gallery-title {
 font-family:"PT Sans", sans-serif;
 font-size: 32px;
@@ -256,6 +278,7 @@ margin-bottom: 28px;
 .contacts {
     font-weight: 700;
     width: 352px;
+
 }
 
 .contacts-title {
@@ -276,13 +299,29 @@ color:#AF7842;
 font-weight:700;
 line-height: 28px;
 text-transform: uppercase;
+margin-bottom: 8px;
+margin-top: 22px;
+}
 
+.contacts-schedule {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.contacts-navigation {
+    /* display: flex; */
+margin-top: 21px;
+margin-bottom: 0;
 }
 
 .contacts-address {
 font-style:normal /*хотя он в моем браузере не отражается наклонным*/ 
 }
-
+.contacts-adress-text {
+    margin-top:8px;
+    margin-bottom: 8px;
+}
 .contacts-phone {
 font-family:"PT Sans", sans-serif;
 font-size: 24px; 
@@ -290,6 +329,11 @@ line-height: 29px;
 text-transform: uppercase;
 color: black;   
 }
+
+.button + .button {
+  margin-left: 16px;
+}
+
 .appointment {
     width:430px;
 }
@@ -372,6 +416,7 @@ padding: 40px 0;
     margin:0;
     padding:0;
     list-style-type: none;
+    margin-bottom: 28px;
 }
 
 .footer-social-item {
@@ -391,15 +436,30 @@ padding: 40px 0;
     margin-right:auto;
 }
 
+.footer-contacts-logo {
+    display: block;
+    margin-bottom: 24px;
+}
+
 .footer-contacts a  {
-font-family: "PT Sans", sans-serif;;
+font-family: "PT Sans", sans-serif;
 color: inherit;
 font-size: 20px;
 text-transform: uppercase; 
 }
 
+.footer-contacts-adress-text {
+margin-top: 24px;
+margin-bottom: 4px;
+}
+.footer-contacts-adress {
+    margin-bottom: 16px;
+    font-style: normal;
+}
+
 .footer-contacts-phone {
     line-height: 28px;
+   
 }
 
 .newsletter {
