@@ -870,6 +870,10 @@ margin-bottom: 4px;
     padding: 0;
     margin:0;
 }
+
+.catalog-filter-item:not(:last-child) {
+  margin-bottom: 16px;
+}
 /*Range*/
 .range-scale {
     position: relative;
@@ -942,12 +946,79 @@ margin-bottom: 4px;
 }
 /*Control*/
 .control {
-    line-height: 22px;
-    font-weight: 700;
+    position: relative;
+    display: block;
+    padding-left: 36px;
+}
+
+.control-label {
+   line-height: 22px; 
+   font-weight: 700;
+   
+}
+
+.control-mark {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #242424;
+    position:absolute;
+    top: 2px;
+    left: 0;
+}
+/* Алтернативный способ отрисовки крестиков
+.control-input[type="checkbox"]:checked + .control-mark::before {
+    content:"";
+    background-image: url(../images/cross-small.svg);
+    width:16px;
+    height: 16px;
+    position: absolute;
+} */
+
+.control-input[type="checkbox"]:checked + .control-mark::before,
+.control-input[type="checkbox"]:checked + .control-mark::after {
+  position: absolute;
+  top: 7px;
+  left: 2px;
+  width: 12px;
+  height: 2px;
+  background-color: #242424;
+  content: "";
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::before {
+  transform: rotate(45deg);
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::after {
+  transform: rotate(-45deg);
 }
 
 
+.control:hover .control-mark,
+.control:hover {
+  border-color: #814b18;
+  cursor: pointer;
+}
 
+.control-input:disabled + .control-mark {
+  border-color: #BDBDBD;
+}
+
+/*Radio*/
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked + .control-mark::before {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #242424;
+  content: "";
+}
 .sorting-container {
     display: flex;
     background-color: #ffffff;
@@ -956,8 +1027,27 @@ margin-bottom: 4px;
     padding: 16px;
 }
 
-.sorting-type {
+.select {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 260px;
     margin-right: auto;
+}
+
+.select-control {
+    width: 100%;
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    padding: 10px 16px;
+    border: 2px solid #242424;
+    padding-right: 48px;
+    background-image:url("../images/arrow-bottom.svg");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  appearance: none;
 }
 
 .sorting-container .button {
