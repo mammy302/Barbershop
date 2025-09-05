@@ -441,9 +441,86 @@ text-transform:uppercase;
 margin-top: 0;
 margin-bottom: 28px;
 /* Проверить сильное ли расхождение (на макете 20) */
+}
+
+.slider-wrapper {
+    position:relative;
+}
+
+.slider-image {
+    display:block;
+}
+
+.slider-controls {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform:translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+}
+.slider-button {
+    width: 48px;
+    height: 60px;
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    background-image: url("../images/arrow-left.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+
+
+.slider-button:hover {
+    background-color: rgba(129, 75, 24, 1);
+}
+
+.slider-button:focus {
+    outline: 2px solid #dbb590;
+    background-color: #4e2e0e;
+}
+
+.slider-next {
+    transform: rotate(180deg);
+    
+}
+
+.slider-pagination {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.slider-pagination-item {
+    margin: 0 4px;
+}
+.slider-pagination-button {
+    width: 8px;
+    height: 8px;
+    margin:0;
+    padding: 0;
+border-radius: 50%;
+border: none;
+background-color: #BDBDBD;
+cursor: pointer;
+}
+
+.slider-pagination-button:hover {
+background-color: #AF7842;
+}
+
+.slider-pagination-button:focus {
+background-color: #DBB590;
 
 }
 
+.slider-pagination-button-current {
+    background-color: #242424;
+}
 .contacts {
     font-weight: 700;
     width: 352px;
@@ -533,7 +610,7 @@ text-transform: uppercase;
     width: 430px;
     grid-template-columns: 114px 74px 208px;
     gap:19px 17px;
-    outline: 3px solid firebrick;
+  
    
 } 
 
@@ -541,9 +618,45 @@ text-transform: uppercase;
     grid-column: 1/-1;
 }
 
+.form-label {
+    line-height: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.field {
+    margin: 0;
+  padding: 8px 14px;
+  font: inherit;
+  font-weight: 700;
+  background-color: #ffffff;
+  border: 2px solid #242424;
+}
+
+.field:hover, .field:focus {
+    border: 2px solid #AF7842;
+    color: #242424;
+}
+
+.field:focus {
+    outline: 2px solid #DBB590;
+}
+
+.field:disabled, .field:disabled:hover {
+    background-color: #E7E7E7;
+    border: 2px solid #595959;
+    color: #595959;
+}
+
+.field::placeholder {
+  color: #dbdbdb;
+  opacity: 1;
+}
 .appointment-submit {
     grid-column: 1/-1;
     justify-self: start;
+    margin-top: 9px;
 }
 .field-group input,
 .field-group label {
@@ -634,10 +747,14 @@ margin-bottom: 4px;
     display: flex;
 }
 
-.newsletter {
-    width: 279px;
+.newsletter-form .field {
+    width: 223px;
 }
 
+.newsletter-email {
+    flex-grow: 1;
+    margin: 0;
+}
 .newsletter-button {
     width: 56px;
     height: 44px;
@@ -737,13 +854,99 @@ margin-bottom: 4px;
     font-size: 20px;
     line-height: 28px;
     text-transform: uppercase;
-    font-weight: 700;<span class="visually-hidden"> 
+    font-weight: 700;
+    margin-bottom: 22px;
 }
 
+.catalog-filter-group {
+    border: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+.catalog-filter-list {
+    list-style-type: none;
+    padding: 0;
+    margin:0;
+}
+/*Range*/
+.range-scale {
+    position: relative;
+    margin-bottom: 16px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #242424;
+}
+
+.range-bar {
+    position: absolute;
+    height: 4px;
+    background-color: #AF7842;
+}
+
+.range-toggle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #242424;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+.range-toggle:hover {
+    background-color: #DBB590;
+}
+
+.range-toggle:active,
+.range-toggle:focus {
+    outline: 2px solid #AF7842;
+}
+
+.range-wrapper-inputs {
+  display: flex;
+  justify-content: center;
+}
+
+.catalog-filter-label {
+  display: flex;
+  margin-right: 5px;
+}
+
+.range-input {
+  width: 30px;
+  padding: 0 2px;
+  font: inherit;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  appearance: textfield;
+}
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.toggle-min {
+    left: -10px;
+    top:-8px;
+}
+
+.toggle-max {
+    top: -8px;
+    right: -10px;
+
+}
+/*Control*/
 .control {
     line-height: 22px;
     font-weight: 700;
 }
+
+
 
 .sorting-container {
     display: flex;
@@ -784,8 +987,7 @@ outline: 3px solid lightpink;
 }
 
 .product-card-image {
-    
-    padding: 16px 0;
+        padding: 16px 0;
 }
 .product-card-content {
     padding: 16px;
