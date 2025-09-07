@@ -1,42 +1,37 @@
 @font-face {
-    font-family:"PT Sans";
-    font-style: normal;
-    font-weight: 400;
-  
-    src: url("../../sedona/fonts/ptsans-400.woff2") format("woff2");
-
-    font-display: swap;
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/PT_Sans/PTSans-Regular.ttf") format("ttf");
+  font-display: swap;
 }
 
 @font-face {
-    font-family:"PT Sans";
-    font-style: normal;
-    font-weight: 700;
-  
-    src: url("../../sedona/fonts/ptsans-700.woff2") format("woff2");
-
-    font-display: swap;
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/PT_Sans/PTSans-Bold.ttf") format("ttf");
+  font-display: swap;
 }
 
 @font-face {
-    font-family:"PT Sans";
-    font-style: italic;
-    font-weight: 400;
-  
-    src: url("../fonts/pt-sans-italic.woff2") format("woff2");
-
-    font-display: swap;
+  font-family: "PT Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/PT_Sans/PTSans-Italic.ttf") format("ttf");
+  font-display: swap;
 }
+
 
 @font-face {
-    font-family:"PT Sans";
-    font-style: italic;
-    font-weight: 700;
-  
-    src: url("../fonts/pt-sans-bold-italic.woff2") format("woff2");
-
-    font-display: swap;
+  font-family: "PT Sans";
+  font-style: italic;
+  font-weight: 700;
+  src: url("../fonts/PT_Sans/PTSans-BoldItalic.ttf") format("ttf");
+  font-display: swap;
 }
+
+
 
 
  /*PT Sans Narrow */
@@ -44,7 +39,7 @@
   font-family: "PT Sans Narrow";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/pt-sans-narrow-bold.woff2") format("woff2");
+  src: url("../fonts/PT_Sans_Narrow/PTSansNarrow-Regular.ttf") format("ttf");
   font-display: swap;
 }
 
@@ -205,7 +200,7 @@ background-color: #000000;
 
 .navigation-link {
     display: block; 
-    font-family: "PT Sans", sans-serif;
+    font-family: "PT Sans Narrow", sans-serif;
     line-height: 22px;
     color: inherit;
     font-weight:700;
@@ -403,7 +398,7 @@ height: 70px;
 }
 
 .advantages-title {
-   font-family: "PT Sans", sans-serif;
+   font-family: "PT Sans Narrow", sans-serif;
    font-size: 32px;
    line-height: 35px;
    font-weight:700;
@@ -415,11 +410,11 @@ height: 70px;
 
 .advantages-title::before {
     position: absolute;
-    bottom: -40px;
+    bottom: -36px;
     left: 50%;
-    width: 18px;
-    height: 18px;
-    margin-left: -9px;
+    width: 13px;
+    height: 13px;
+    margin-left: -6px;
     content:"";
     background-color: #ffffff;
     transform: rotate(45deg);
@@ -479,7 +474,7 @@ height: 70px;
 }
 
 .services-title {
-font-family:"PT Sans", sans-serif;
+font-family:"PT Sans Narrow", sans-serif;
 font-size: 32px;
 font-weight:700;
 line-height: 35px;
@@ -503,6 +498,7 @@ margin-bottom: 28px;
 }
 
 .services-item {
+    font-family:"PT Sans Narrow", sans-serif ;
     margin-bottom: 22px;
     display: flex;
       align-items: baseline;
@@ -527,7 +523,7 @@ margin-bottom: 28px;
 
 }
 .gallery-title {
-font-family:"PT Sans", sans-serif;
+font-family:"PT Sans Narrow", sans-serif;
 font-size: 32px;
 font-weight:700;
 line-height: 35px;
@@ -622,7 +618,7 @@ background-color: #DBB590;
 }
 
 .contacts-title {
-font-family:"PT Sans", sans-serif;
+font-family:"PT Sans Narrow", sans-serif;
 font-size: 32px;
 font-weight: 700;
 line-height: 35px; 
@@ -633,7 +629,7 @@ margin-bottom: 28px;
 }
 
 .contacts-subtitle {
-font-family:"PT Sans", sans-serif;
+font-family:"PT Sans Narrow", sans-serif;
 font-size: 20px;
 color:#AF7842;
 font-weight:700;
@@ -663,7 +659,7 @@ font-style:normal /*хотя он в моем браузере не отража
     margin-bottom: 8px;
 }
 .contacts-phone {
-font-family:"PT Sans", sans-serif;
+font-family:"PT Sans Narrow", sans-serif;
 font-size: 24px; 
 line-height: 29px;
 text-transform: uppercase;
@@ -678,8 +674,29 @@ color: black;
     width:430px;
 }
 
+.appointment-form {
+  display: grid;
+  grid-template-columns: 114px 74px 208px;
+  gap: 19px 17px;
+}
+
+.appointment-form-name {
+  grid-column: 1 / -1;
+}
+
+.appointment-submit {
+  grid-column: 1 / -1;
+  justify-self: start;
+}
+
+.field-group {
+    display:flex;
+    flex-direction: column;
+  margin: 0;
+}
+
 .appointment-title {
-font-family:"PT Sans", sans-serif;
+font-family:"PT Sans Narrow", sans-serif;
 font-size: 32px;
 font-weight: 700;
 line-height: 35px; 
@@ -699,18 +716,8 @@ line-height: 20px;
 .appointment label {
 text-transform: uppercase;  
 }
-.appointment-form {
-    display: grid;
-    width: 430px;
-    grid-template-columns: 114px 74px 208px;
-    gap:19px 17px;
-  
-   
-} 
 
-.appointment-form-name {
-    grid-column: 1/-1;
-}
+
 
 .form-label {
     line-height: 24px;
@@ -719,8 +726,12 @@ text-transform: uppercase;
     margin-bottom: 8px;
 }
 
+.form-label-icon {
+  position: relative;
+  padding-right: 16px;
+}
 .field {
-    margin: 0;
+  margin: 0;
   padding: 8px 14px;
   font: inherit;
   font-weight: 700;
@@ -746,26 +757,83 @@ text-transform: uppercase;
 .field::placeholder {
   color: #dbdbdb;
   opacity: 1;
-}
-.appointment-submit {
-    grid-column: 1/-1;
-    justify-self: start;
-    margin-top: 9px;
-}
-.field-group input,
-.field-group label {
-    display: block;
-    width: 100%;
-    box-sizing: border-box; 
-}
+} 
+
+
 /* .field-group {
     margin: 0;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     
-} */
+}
 
+/*Тултип*/
+
+.tooltip {
+  position: absolute;
+  margin-top: 4px;
+  margin-left: 2px;
+  width: 16px;
+  height: 16px;
+}
+
+.tooltip-toggle {
+border: none;
+background-color: transparent;
+padding: 0;
+display: block;
+}
+
+.tooltip-icon {
+    width: 100%;
+    height: 100%;
+    color: #242424;
+    display: block;
+}
+
+.tooltip-toggle:hover .tooltip-icon {
+  color: #AF7842;
+}
+
+.tooltip-text {
+width: 160px;
+display: block;
+background-color: #242424;
+color: #ffffff;
+text-transform: none;
+border-radius: 8px;
+padding: 5px 8px;
+font-size: 14px;
+line-height: 17px;
+font-weight: 400;
+position: absolute;
+bottom: 100%;
+margin-bottom: 6px;
+left: 50%;
+transform:translateX(-50%);
+z-index: 1;
+display:none;
+}
+
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+  display: block;
+}
+
+/* .tooltip-text:after {
+  content:'';
+  background-image: url("../images/tooltip-arrow.svg");
+  width: 14px;
+  height: 6px;
+  position:absolute;
+  transform: rotate(180deg);
+  top: 100%;
+  left:0;
+  right:0;
+  margin-left: auto;
+  margin-right: auto;
+} */
 
 .page-footer {
 background-color:#242424;
@@ -818,7 +886,7 @@ padding: 40px 0;
 }
 
 .footer-contacts a  {
-font-family: "PT Sans", sans-serif;
+font-family: "PT Sans Narrow", sans-serif;
 color: inherit;
 font-size: 20px;
 text-transform: uppercase; 
@@ -835,8 +903,8 @@ margin-bottom: 4px;
 
 .footer-contacts-phone {
     line-height: 28px;
-   
-}
+    
+ }
 .newsletter-form {
     display: flex;
 }
@@ -891,7 +959,7 @@ margin-bottom: 4px;
 }
 
 .page-footer-title {
-    font-family: "PT Sans",sans-serif;
+    font-family: "PT Sans Narrow",sans-serif;
     font-size: 20px;
     line-height:28px;
     text-transform: uppercase;

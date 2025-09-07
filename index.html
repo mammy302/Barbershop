@@ -5,7 +5,9 @@
   <meta charset="utf-8">
   <title>Барбершоп "Бородинский"</title>
 
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/styles.css">
 
 </head>
@@ -190,19 +192,38 @@
         <p class="appointment-text">Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони.</p>
         <form class="appointment-form" action="" method="post">
           <p class="field-group appointment-form-date">
+            <span class="form-label form-label-icon">
             <label class="form-label" for="appointment-date">Дата</label>
-            <input class="field" type="text" id="appointment-date" name="appointment-date" placeholder="01.01.2001.">
+            <span class="tooltip">
+              <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
+                <svg class="tooltip-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16"><path fill="currentColor" fill-rule="evenodd" d="M8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12Zm1.273-8.727a1.273 1.273 0 1 1-2.546 0 1.273 1.273 0 0 1 2.546 0Zm0 2.227V11H6.727V7.5h2.546Z" clip-rule="evenodd"/></svg>
+              </button>
+              <span class="tooltip-text" role="tooltip" id="tooltip-label-date" >Укажите желаемую дату,и мы свяжемся с вами для подтверждения брони</span>
+            </span>
+            </span>
+                      <input class="field" type="text" id="appointment-date" name="appointment-date" placeholder="01.01.2001.">
           </p>
+
           <p class="field-group appointment-form-time">
+            <span class="form-label form-label-icon">
             <label class="form-label" for="appointment-time">Время</label>
-            <input class="field" type="text" id="appointment-time" name="appointment-time" placeholder="12.00">
+              <span class="tooltip">
+              <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
+                <svg class="tooltip-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16"><path fill="currentColor" fill-rule="evenodd" d="M8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12Zm1.273-8.727a1.273 1.273 0 1 1-2.546 0 1.273 1.273 0 0 1 2.546 0Zm0 2.227V11H6.727V7.5h2.546Z" clip-rule="evenodd"/></svg>
+              </button>
+              <span class="tooltip-text"  role="tooltip" id="tooltip-label-date">Укажите желаемое время, и мы свяжемся с вами для подтверждения брони</span>
+            </span>
+            </span>
+                        <input class="field" type="text" id="appointment-time" name="appointment-time" placeholder="12.00">
           </p>
+
           <p class="field-group appointment-form-phone">
                 <label class="form-label" for="appointment-phone">
                   Телефон
                 </label>
                 <input class="field" type="text" id="appointment-phone" name="appointment-phone" placeholder="+7 800 000-00-00">
               </p>
+
           <p class="field-group appointment-form-name">
             <label class="form-label" for="appointment-name"> Ваше имя</label>
             <input class="field" type="text" id="appointment-name" name="appointment-name" placeholder="Иван">
